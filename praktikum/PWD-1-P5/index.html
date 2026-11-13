@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Sederhana</title>
+    <!-- Font Google Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Memuat Library jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>ElectroStore</h1>
+        <p>Temukan aksesoris komputer dan gadget terbaik</p>
+    </header>
+
+    <div class="container">
+        <!-- Area Daftar Produk & Pencarian -->
+        <main class="main-content">
+            <input type="text" id="searchInput" class="search-bar" placeholder="Cari produk berdasarkan nama...">
+            <div id="productGrid" class="product-grid">
+                <!-- Daftar produk akan di-render secara dinamis oleh script.js -->
+            </div>
+        </main>
+
+        <!-- Area Panel Keranjang Belanja -->
+        <aside class="cart-panel">
+            <div class="cart-header">
+                <h3>Keranjang Belanja</h3>
+                <button id="toggleCartBtn" class="btn-toggle">Tutup/Buka</button>
+            </div>
+
+            <div id="cartBody">
+                <ul id="cartList" class="cart-items">
+                    <li class="empty-msg">Keranjang masih kosong</li>
+                </ul>
+
+                <div class="cart-summary">
+                    <p>Jumlah Item: <strong id="totalItems">0</strong></p>
+                    <p>Total Harga: <strong id="totalPrice">Rp 0</strong></p>
+                </div>
+
+                <div class="cart-actions">
+                    <button id="checkoutBtn" class="btn btn-success">Checkout</button>
+                    <button id="clearCartBtn" class="btn btn-danger">Kosongkan Keranjang</button>
+                </div>
+            </div>
+
+            <!-- Area Ringkasan Pesanan setelah Checkout -->
+            <div id="orderSummary" class="order-summary">
+                <h4>Ringkasan Pesanan</h4>
+                <div id="summaryContent"></div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Menghubungkan file JavaScript/jQuery eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
